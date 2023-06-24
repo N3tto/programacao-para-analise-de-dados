@@ -27,3 +27,34 @@ media <- (abdominais.n + salto.n + suspensao.n + correr.n + conhecimento.n) / 5
 print(media)
 
 print(nomes[max(media)==media])
+
+
+load("vetor.RData")
+print(vetor01[is.na(vetor01)])
+
+vetor01 <- vetor01[which(is.na(vetor01))]
+
+#Q5
+print(mean(vetor01, na.rm=TRUE))
+
+#Q6
+print(median(vetor01, na.rm=TRUE))
+
+#Q7
+print(sd(vetor01, na.rm=TRUE))
+
+#Q7
+print(sum(is.na(vetor01)))
+
+#Q8
+print(mean(is.na(vetor01)))
+
+#Q9
+print(sum(length(vetor01[which(vetor01>7.00 & vetor01<8.00)])))
+
+#Q10
+print(sum(length(vetor01[which(vetor01>9.00 | vetor01<1.00)])))
+
+#Q11
+vetor01 <- vetor01[is.na(vetor01)]
+vetor01 <- vetor01[which(is.na(vetor01))]
